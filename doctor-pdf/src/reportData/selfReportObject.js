@@ -1,13 +1,16 @@
 export const GROUP_ORDER = [
-  "FRAILTY",
+  "MOOD",
   "HEALTH RISKS",
   "HEALTH SERVICE USE",
-  "MOOD",
+  "FRAILTY",
   "COGNITION & COMMUNICATION",
 ];
 
 export const GROUP_TO_BREAK_TO_NEW_PAGE = new Set([
-  "HEALTH SERVICE USE",
+  "FRAILTY",
+  "HEALTH RISKS",
+
+  // "HEALTH SERVICE USE",
   // "COGNITION & COMMUNICATION"
 ]);
 
@@ -216,7 +219,7 @@ export const selfReportStructure = {
       bottomText: "(CHESS Scale)",
       keyInReport: "SCALE_CHESS",
       valueCode: "SIX",
-      newPage: true,
+      newPage: false,
       valueInfo: [
         "No health instability",
         "Minimal health instability",
@@ -292,6 +295,7 @@ export const selfReportStructure = {
       bottomText: "(AUA Scale)",
       keyInReport: "SCALE_AUA",
       valueCode: "SIX",
+      newPage: true,
       minimumValue: 1,
       valueInfo: [
         "Least urgent",
@@ -573,7 +577,7 @@ Score informed by: ED or overnight hospital visits; Change in ADL status; histor
     {
       title: "Hospital use",
       bottomText: "(last 90 days)",
-      description: 'Admissions for overnight stay.',
+      description: "Admissions for overnight stay.",
       keyInReport: "H1a", // This does not exists in report.
       values: [],
       valueCode: "TWO",

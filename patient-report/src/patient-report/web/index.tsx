@@ -28,7 +28,6 @@ const WebReport = () => {
     <Wrapper>
       <div>
         <Header />
-        <Comments />
         <Summary />
         <main>
           {patientReport.map((section, index) => (
@@ -37,6 +36,8 @@ const WebReport = () => {
         </main>
 
         <Footer />
+
+        <Comments />
       </div>
     </Wrapper>
   );
